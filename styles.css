@@ -1,0 +1,180 @@
+/** Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/** reset.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Montserrat', 'Fraunces', serif, sans-serif;
+}
+
+/** Déclaration :root */
+:root {
+    /* primary colors */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    /* neutral colors */
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+ /** General */
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background: var(--Cream);
+    position: relative;
+    margin: auto;
+ }
+
+ /** Article */
+.card {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    border-radius: 10px;
+    background: var(--White);
+}
+
+/** Container image*/
+.container-image {
+    width: 100%;
+}
+.container-image .image-desktop {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 10px 0 0 10px;
+}
+.container-image .image-mobile {
+    display: none;
+}
+
+/** Container infos */
+.container-infos {
+    width: 90%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--Dark-grayish-blue);   
+}
+h2 {
+    font-size: 2.5rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: var(--Very-dark-blue);
+}
+p {
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--Dark-grayish-blue);
+}  
+.prix {
+    display: flex;
+    align-items: center;
+    justify-content: left
+   
+} 
+.prix p {
+    margin: 0;
+    font-size: 1rem;
+    text-decoration: line-through;
+}
+.prix .reduce {
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: var(--Dark-cyan);
+    margin-right: 15px;
+    text-decoration: none;
+}
+.button {
+    width: 100%;
+    border-radius: 5px;
+}
+.button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    background: var(--Dark-cyan);
+    color: var(--White);
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button img {
+    margin-right: 10px;
+}
+
+/** Responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .card {
+        width: 90vw;
+        height: 90vh;
+        flex-direction: column;
+    }
+    .container-image {
+        width: 100%;
+    }
+    .container-image .image-desktop {
+        display: none;
+    }
+    .container-image .image-mobile {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+    .container-infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+    }
+    h1 {
+        font-size: 0.8rem;
+    }
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+    .prix {
+        display: flex;
+        align-items: center;
+        justify-content: left
+    }
+    .prix .reduce {
+        margin-right: 20px;
+    }
+    .button button {
+        height: 2.5rem;
+    }
+}
