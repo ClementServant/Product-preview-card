@@ -38,7 +38,8 @@
 .card {
     display: flex;
     flex-direction: row;
-    width: 50vw;
+    width: 35vw;
+    height: 60vh;
     border-radius: 10px;
     background: var(--White);
 }
@@ -73,7 +74,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 5px;
-    color: var(--Dark-grayish-blue);   
+    color: var(--Dark-grayish-blue); 
 }
 h2 {
     font-size: 2.5rem;
@@ -84,13 +85,14 @@ h2 {
 p {
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
+    line-height: 1.5rem;
+    font-weight: 500;
     color: var(--Dark-grayish-blue);
 }  
 .prix {
     display: flex;
     align-items: center;
-    justify-content: left
-   
+    justify-content: left;
 } 
 .prix p {
     margin: 0;
@@ -98,7 +100,7 @@ p {
     text-decoration: line-through;
 }
 .prix .reduce {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: "Fraunces", serif;
     font-weight: 700;
     color: var(--Dark-cyan);
@@ -108,13 +110,14 @@ p {
 .button {
     width: 100%;
     border-radius: 5px;
+
 }
 .button button {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     background: var(--Dark-cyan);
     color: var(--White);
     font-size: 1rem;
